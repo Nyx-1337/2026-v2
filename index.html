@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Chào mừng — Trang chính</title>
   <meta name="description" content="Chào mừng đến với trang của chúng tôi — nơi chia sẻ thông tin, sự kiện và kết nối với cộng đồng." />
-  <!-- Open Graph -->
+
   <meta property="og:title" content="Chào mừng — Trang chính" />
   <meta property="og:description" content="Chào mừng đến với trang của chúng tôi — nơi chia sẻ thông tin, sự kiện và kết nối với cộng đồng." />
   <meta property="og:type" content="website" />
-  <!-- Favicon placeholder -->
+
   <link rel="icon" href="/favicon.ico" />
 
   <style>
@@ -118,7 +118,7 @@
     .btn.primary{background:var(--accent);color:var(--bg)}
     .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
 
-    /* Features */
+
     .features{
       display:grid;
       grid-template-columns:repeat(1,1fr);
@@ -137,7 +137,7 @@
     .feature h4{margin:0 0 8px 0}
     .feature p{margin:0;color:var(--muted);font-size:14px}
 
-    /* Right column: subscribe box */
+  
     .subscribe h3{margin:0 0 8px 0}
     .subscribe p{margin:0 0 12px 0;color:var(--muted)}
 
@@ -274,21 +274,21 @@
         msg.textContent = 'Vui lòng nhập email hợp lệ.';
         return;
       }
-      // Demo: không gửi server, chỉ hiển thị thông báo.
+
       msg.textContent = 'Cảm ơn! Email của bạn đã được ghi nhận (demo).';
       emailInput.value = '';
       nameInput.value = '';
       setTimeout(()=>{ msg.textContent = ''; }, 5000);
     });
 
-    // Simple visitor counter using localStorage (demo)
+
     const key = 'site_demo_visits_v1';
     let visits = Number(localStorage.getItem(key) || 0);
     visits++;
     localStorage.setItem(key, visits);
     document.getElementById('visitor').textContent = 'Lượt truy cập: ' + visits;
 
-    // Smooth scroll for anchor links
+
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', function(e){
         const target = document.querySelector(this.getAttribute('href'));
